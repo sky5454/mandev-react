@@ -35,3 +35,39 @@
 ### git flow 工作流程
 
 - 参考链接：[https://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html]
+
+- 新建功能
+  - 新建feature分支
+  ```
+  git checkout -b feature/MYFEATURE
+  git flow feature start MYFEATURE
+  ```
+
+  - 完成新功能开发，将feature分支合并到develop分支
+  ```
+  git flow feature finish MYFEATURE
+  ```
+
+  - 基于最新的develop分支，切出release分支，此版本为预发布版本，分支为版本号
+  ```
+  git checkout -b release/1.0.0
+  git flow release start release/1.0.0
+  ```
+
+  - 测试无问题，合并到develop分支和mian/master分支，输入版本信息
+  ```
+  git flow release finish release/1.0.0
+  ```
+
+  - 在develop分支，执行 yarn release 命令，输出提交日志，并推送develop分支到远程
+  ```
+  yarn release
+  git push origin develop
+  ```
+
+  - 切换到main/master 分支，合并develop分支，推送到远程，推送最新的tag到远程
+  ```
+  git merge develop
+  git push origin main
+  git push v1.0.0
+  ```
