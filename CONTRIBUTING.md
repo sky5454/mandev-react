@@ -6,7 +6,7 @@
 
 - 标题
 
-``` 
+```
 <type>(<scope>): <subject>
 <空行>
 <body>
@@ -31,44 +31,51 @@
 - Footer
   - 放置不兼容的变更和Issue关闭的信息
 
-
 ### git flow 工作流程
 
 - 参考链接：[https://danielkummer.github.io/git-flow-cheatsheet/index.zh_CN.html]
 
 - 新建功能
+
   - 新建feature分支
-  ``` shell
+
+  ```shell
   git checkout -b feature/MYFEATURE
   git flow feature start MYFEATURE
   ```
 
   - 完成新功能开发，将feature分支合并到develop分支
-  ``` shell
+  - 现在已写成文件，直接执行命令 yarn feature即可
+
+  ```shell
   git flow feature finish MYFEATURE
   ```
 
   - 基于最新的develop分支，切出release分支，此版本为预发布版本，分支为版本号
-  ``` shell
+
+  ```shell
   git checkout -b release/1.0.0
   git flow release start release/1.0.0
   ```
 
   - 测试无问题， 合并前执行yarn release 命令，输出提交日志，合并到develop分支和mian/master分支，输入版本信息
   - 输出提交日志使用的是standard-version，此时已经进行打版，git flow release finish -n中 -n配置跳过打版
-  ``` shell
+
+  ```shell
   yarn release
   ```
 
   - 在develop分支，并推送develop分支到远程
-  ``` shell
+
+  ```shell
   git push origin develop
   ```
 
   - 切换到main/master 分支, 推送到远程，推送最新的tag到远程
-  ``` shell
+
+  ```shell
   git push origin main
-  git push v1.0.0
+  git push origin v1.0.0
   ```
 
 - bug修改
