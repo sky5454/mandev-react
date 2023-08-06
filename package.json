@@ -1,6 +1,6 @@
 {
   "name": "mandev-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "log": "conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
-    "release": "yarn log && git add . && git commit --amend"
+    "release": "standard-version"
   },
   "eslintConfig": {
     "extends": [
