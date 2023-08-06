@@ -2,7 +2,7 @@
 module.exports = {
   // 跳过
   skip: {
-    bump: true, // 取得当前版本
+    bump: false, // 取得当前版本
     commit: true, // 提交变动
     changelog: false, // 自动产出changelog文档
     tag: false // 在git中增加tag标识
@@ -27,7 +27,5 @@ module.exports = {
   // 对比版本的url
   compareUrlFormat: "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
   // hash链接(commit的连接，例如：https://git.yoururl.com/blank91/ui/commit/f91dcfdebf89be24f550ccbbd8c4f03029b44812)
-  commitUrlFormat: "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
-  // 识别的tag前缀
-  'tag-prefix': 'v'
+  commitUrlFormat: "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}"
 }
