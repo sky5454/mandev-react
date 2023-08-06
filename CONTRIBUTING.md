@@ -68,7 +68,7 @@
   - 切换到main/master 分支, 推送到远程，推送最新的tag到远程
   ``` shell
   git push origin main
-  git push v1.0.0
+  git push origin v1.0.0
   ```
 
 - bug修改
