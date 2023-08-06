@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "log": "conventional-changelog --n node_modules/@nicecode/changelog -i CHANGELOG.md -s -r 1",
+    "log": "conventional-changelog --n node_modules/@nicecode/changelog -i CHANGELOG.md -s -r 0",
     "release": "yarn log && git add . && git commit --amend"
   },
   "eslintConfig": {
