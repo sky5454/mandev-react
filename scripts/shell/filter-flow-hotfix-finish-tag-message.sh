@@ -28,6 +28,8 @@ CHANGELOG_MESSAGE=`yarn cross-env PACKAGE=$PACKAGE PREVIOUS_TAG=$PREVIOUSTAG CUR
 # 判断是否需要rebase，落后于target branch合并会失败
 [ $BEHIND_COMMIT -ne 0 ] && { echo 'Please rebase master before finishing this branch'; exit 1; }
 
+# 更新版本号
+yarn version --new-version ${PACKAGE_VERSION/v/} --no-git-tag-version > /dev/null
 TEMP_CHANGELOG_MESSAGE=$(echo "### $PACKAGE_VERSION";git log -1 --pretty="#### %ci";printf "\n";echo "${CHANGELOG_MESSAGE}";printf "\n---\n\n";cat ./CHANGELOG.md)
 echo "$TEMP_CHANGELOG_MESSAGE" > ./CHANGELOG.md
 
