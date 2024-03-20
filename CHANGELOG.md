@@ -1,3 +1,14 @@
+### v1.1.3
+#### 2024-03-20 22:58:52 +0800
+
+
+
+### Features
+
+* **mandev-react:** 修改sass依赖  ([df4194e](https://github.com/sky5454/mandev-react/commit/df4194e)) by: **Kuangzhibin**
+
+---
+
 ### v1.1.2
 #### 2024-03-20 15:27:35 +0800
 
