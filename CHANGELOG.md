@@ -1,3 +1,14 @@
+### v1.1.2
+#### 2024-03-20 15:27:35 +0800
+
+
+
+### Features
+
+* **mandev-react:** shell脚本错误修复  ([c4e4ba3](https://github.com/sky5454/mandev-react/commit/c4e4ba3)) by: **kuangzhibin**
+
+---
+
 ### v1.1.1
 #### 2024-03-20 10:29:59 +0800
 
