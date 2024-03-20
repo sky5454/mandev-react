@@ -15,6 +15,10 @@
 
 MESSAGE=$1
 VERSION=$2
+# 同步远程tag，防止本地打版写入多个版本changelog-needed
+git fetch --tags
+
+BEHIND_COMMIT=$(git rev-list --count ..origin/main)
 # 根据tag来截取需要写入日志的package
 PACKAGE=${VERSION#*-}
 # 获取需要写入日志的package最近的一个tag
