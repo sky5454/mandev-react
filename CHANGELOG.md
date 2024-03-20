@@ -1,3 +1,14 @@
+### v1.1.1
+#### 2024-03-20 10:29:59 +0800
+
+
+
+### Features
+
+* **mandev-react:** 更改shell脚本  ([#3](https://github.com/sky5454/mandev-react/issues/3)) ([8a4cda3](https://github.com/sky5454/mandev-react/commit/8a4cda3)) by: **zhibing**
+
+---
+
 ### v1.1.0
 #### 2024-03-20 10:14:07 +0800
 
